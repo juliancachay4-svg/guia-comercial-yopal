@@ -1,0 +1,149 @@
+/* Reseteo básico de márgenes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Contenedor centrado */
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Encabezado */
+.encabezado {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.encabezado h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.encabezado p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Sección de bienvenida */
+.bienvenida {
+    text-align: center;
+    margin: 2.5rem 0 1.5rem 0;
+}
+
+.bienvenida h2 {
+    font-size: 1.6rem;
+    color: #1e3a8a;
+    margin-bottom: 0.5rem;
+}
+
+.bienvenida p {
+    color: #666;
+}
+
+/* Cuadrícula de Categorías (Responsive) */
+.categorias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.2rem;
+    padding-bottom: 3rem;
+}
+
+/* Tarjeta individual de categoría */
+.categoria {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.categoria:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    border-color: #3b82f6;
+}
+
+.categoria .icono {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.categoria h3 {
+    font-size: 1rem;
+    color: #1f2937;
+}
+
+/* Listado de Negocios (generados por JS) */
+#lista-negocios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.tarjeta-negocio {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.tarjeta-negocio h3 {
+    color: #1e3a8a;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.tarjeta-negocio p {
+    color: #4b5563;
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+}
+
+/* Botón Volver */
+#btn-volver {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#btn-volver:hover {
+    background-color: #1d4ed8;
+}
+
+/* Pie de página */
+footer {
+    margin-top: auto;
+    background-color: #1f2937;
+    color: #9ca3af;
+    text-align: center;
+    padding: 1.2rem 0;
+    font-size: 0.9rem;
+}

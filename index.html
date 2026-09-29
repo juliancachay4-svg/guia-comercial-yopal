@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Guía Comercial Yopal</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <!-- Encabezado -->
+    <header class="encabezado">
+        <div class="contenedor">
+            <h1>Guía Comercial Yopal</h1>
+
+            <p>
+                Encuentra fácilmente los negocios de nuestra ciudad
+            </p>
+        </div>
+    </header>
+
+
+    <!-- Contenido principal -->
+    <main class="contenedor">
+
+        <!-- Página principal -->
+        <section id="inicio">
+
+            <section class="bienvenida">
+                <h2>¿Qué estás buscando?</h2>
+
+                <p>
+                    Selecciona una categoría para encontrar negocios en Yopal.
+                </p>
+            </section>
+
+
+            <!-- Categorías -->
+            <section class="categorias">
+
+                <div class="categoria" data-categoria="comida">
+                    <span class="icono">🍔</span>
+                    <h3>Comida</h3>
+                </div>
+
+                <div class="categoria" data-categoria="farmacias">
+                    <span class="icono">💊</span>
+                    <h3>Farmacias</h3>
+                </div>
+
+                <div class="categoria" data-categoria="veterinarias">
+                    <span class="icono">🐶</span>
+                    <h3>Veterinarias</h3>
+                </div>
+
+                <div class="categoria" data-categoria="llantas">
+                    <span class="icono">🛞</span>
+                    <h3>Llantas y rines</h3>
+                </div>
+
+                <div class="categoria" data-categoria="ferreterias">
+                    <span class="icono">🔧</span>
+                    <h3>Ferreterías</h3>
+                </div>
+
+                <div class="categoria" data-categoria="repuestos">
+                    <span class="icono">🔩</span>
+                    <h3>Repuestos</h3>
+                </div>
+
+                <div class="categoria" data-categoria="ropa">
+                    <span class="icono">👕</span>
+                    <h3>Ropa</h3>
+                </div>
+
+                <div class="categoria" data-categoria="tecnologia">
+                    <span class="icono">📱</span>
+                    <h3>Tecnología</h3>
+                </div>
+
+                <div class="categoria" data-categoria="hogar">
+                    <span class="icono">🏠</span>
+                    <h3>Hogar</h3>
+                </div>
+
+                <div class="categoria" data-categoria="belleza">
+                    <span class="icono">💇</span>
+                    <h3>Belleza</h3>
+                </div>
+
+                <div class="categoria" data-categoria="automotriz">
+                    <span class="icono">🚗</span>
+                    <h3>Automotriz</h3>
+                </div>
+
+                <div class="categoria" data-categoria="otros">
+                    <span class="icono">📦</span>
+                    <h3>Otros</h3>
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- Listado de negocios -->
+        <section id="negocios" style="display: none;">
+
+            <section class="bienvenida">
+
+                <h2 id="titulo-categoria">
+                    Negocios
+                </h2>
+
+                <p>
+                    Negocios disponibles en esta categoría.
+                </p>
+
+            </section>
+
+
+            <!-- Aquí JavaScript colocará los negocios -->
+            <div id="lista-negocios"></div>
+
+
+            <!-- Botón para regresar -->
+            <div style="text-align: center; margin: 2rem 0;">
+
+                <button id="btn-volver">
+                    ← Volver a categorías
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Pie de página -->
+    <footer>
+
+        <p>
+            Guía Comercial Yopal © 2026
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+
+</body>
+</html>
