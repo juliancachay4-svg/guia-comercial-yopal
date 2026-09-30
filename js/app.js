@@ -1,32 +1,70 @@
-// Base de datos local de prueba
+// Base de datos local de negocios reales en Yopal
 const negocios = [
+    // --- FARMACIAS ---
     {
         id: 1,
-        nombre: "Farmacia La Salud",
+        nombre: "Droguería Alemana",
         categoria: "farmacias",
-        direccion: "Calle 10 # 15-20, Yopal",
-        telefono: "+57 310 123 4567"
+        direccion: "Cra 20 con 24, Yopal",
+        telefono: "+57 311 899 6550"
     },
     {
         id: 2,
-        nombre: "Farmacia Central",
+        nombre: "Droguería El Buen Precio",
         categoria: "farmacias",
-        direccion: "Carrera 20 # 8-45, Yopal",
-        telefono: "+57 320 765 4321"
+        direccion: "Cra 20 # 22-71, Yopal",
+        telefono: "+57 322 820 7373"
     },
     {
         id: 3,
-        nombre: "Restaurante El Criollo",
-        categoria: "comida",
-        direccion: "Calle 24 # 18-30, Yopal",
-        telefono: "+57 311 987 6543"
+        nombre: "Servidrogas Gabán",
+        categoria: "farmacias",
+        direccion: "Cra 20 # 17-05, Yopal",
+        telefono: "+57 322 708 2726"
     },
     {
         id: 4,
-        nombre: "Veterinaria Huellitas",
-        categoria: "veterinarias",
-        direccion: "Carrera 19 # 12-10, Yopal",
-        telefono: "+57 315 444 5566"
+        nombre: "Droguería Farmacia Líder",
+        categoria: "farmacias",
+        direccion: "Cra con 15, Yopal",
+        telefono: "+57 321 456 8550"
+    },
+    {
+        id: 5,
+        nombre: "La Rebaja Plus 24H",
+        categoria: "farmacias",
+        direccion: "Calle 9 # 23-06, Yopal",
+        telefono: "+57 317 300 4444"
+    },
+
+    // --- COMIDA ---
+    {
+        id: 6,
+        nombre: "Cafetería Vegetariana y Vegana Orígenes",
+        categoria: "comida",
+        direccion: "Calle 11 # 26-02, Yopal",
+        telefono: "+57 322 908 5720"
+    },
+    {
+        id: 7,
+        nombre: "Cafetería Casa Victoria",
+        categoria: "comida",
+        direccion: "Calle 11 # 26-01, Yopal",
+        telefono: "+57 311 447 2720"
+    },
+    {
+        id: 8,
+        nombre: "Frutimanía Postres Boyacenses",
+        categoria: "comida",
+        direccion: "Calle 11 # 24-09, Yopal",
+        telefono: "+57 312 679 9561"
+    },
+    {
+        id: 9,
+        nombre: "Pizzería Mai Mai",
+        categoria: "comida",
+        direccion: "Calle 11 # 24-04, Yopal",
+        telefono: "+57 321 431 8735"
     }
 ];
 
@@ -64,7 +102,7 @@ function mostrarCategoria(idCategoria, nombreCategoria) {
 
     if (filtrados.length === 0) {
         listaNegocios.innerHTML = `
-            <p style="text-align: center; color: #666; padding: 2rem 0;">
+            <p style="text-align: center; color: #666; padding: 2rem 0; grid-column: 1 / -1;">
                 No hay negocios registrados en esta categoría aún.
             </p>
         `;
@@ -77,7 +115,7 @@ function mostrarCategoria(idCategoria, nombreCategoria) {
         tarjeta.innerHTML = `
             <h3>${item.nombre}</h3>
             <p>📍 <strong>Dirección:</strong> ${item.direccion}</p>
-            <p>📞 <strong>Teléfono:</strong> ${item.telefono}</p>
+            <p>📞 <strong>Teléfono:</strong> <a href="https://wa.me/57${item.telefono.replace(/[^0-9]/g, '')}" target="_blank" style="color: #25D366; font-weight: bold; text-decoration: none;">${item.telefono} (WhatsApp)</a></p>
         `;
         listaNegocios.appendChild(tarjeta);
     });
